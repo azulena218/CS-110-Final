@@ -41,20 +41,26 @@ public class WarGUI extends JFrame
       f1 = new JPanel();
       f1.add(h1);
       f2 = new JPanel();
+      f2.setBackground(Color.GRAY);
       f2.add(new JLabel(back));
-      
+     
       front1 = new JLabel();
       f3 = new JPanel();
+      f3.setBackground(Color.GRAY);
       f3.add(front1);
       
       // Create a label for player 2
       JLabel h2 = new JLabel("Player 2");
       f4 = new JPanel();
+      //f4.setBackground(Color.BLUE);
       f4.add(h2);
       f5 = new JPanel();
+      f5.setBackground(Color.GRAY);
       f5.add(new JLabel(back));
+      
       front2 = new JLabel();
       f6 = new JPanel();
+      f6.setBackground(Color.GRAY);
       f6.add(front2);
       
       // Quit button
