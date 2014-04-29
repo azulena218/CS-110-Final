@@ -42,7 +42,9 @@ public class WarGUI extends JFrame
       f1.add(h1);
       f2 = new JPanel();
       f2.add(new JLabel(back));
+      
       front1 = new JLabel();
+      f3 = new JPanel();
       f3.add(front1);
       
       // Create a label for player 2
@@ -52,6 +54,7 @@ public class WarGUI extends JFrame
       f5 = new JPanel();
       f5.add(new JLabel(back));
       front2 = new JLabel();
+      f6 = new JPanel();
       f6.add(front2);
       
       // Quit button
@@ -60,9 +63,12 @@ public class WarGUI extends JFrame
       f7 = new JPanel();
       f7.add(quit);
       
+      // Empty panel
+      f8 = new JPanel();
+      
       // Continue button
       go = new JButton("Go");
-      go.addActionListener(new GoListener());
+      //go.addActionListener(new GoListener());
       f9 = new JPanel();
       f9.add(go);
       
@@ -74,7 +80,7 @@ public class WarGUI extends JFrame
 		add(f5);
 		add(f6);
       add(f7);
-      //add(f8);
+      add(f8);
       add(f9);
    } 
    
@@ -93,28 +99,28 @@ public class WarGUI extends JFrame
    /**
       The GoListener class prompts the next move in the game
    */
-   
-   public class GoListener implements ActionListener
-   {
-      public void actionPerformed(ActionEvent e) 
-      {
-         // If the game is not over
-         if(!w.getStatus())
-			{
-            // Get the jpgs of the two cards
-				card1 = w.getH1().look().getPicture();
-				card2 = w.getH2().look().getPicture();
-				front1.setIcon(card1);
-            front2.setIcon(card2);
-             
-            // Display the two cards
-            f3.add(new JLabel(card1));
-            f6.add(new JLabel(card2));
-            
-				w.go();
-            
-			}
-      }    
-   }
+  //  
+//    public class GoListener implements ActionListener
+//    {
+//       public void actionPerformed(ActionEvent e) 
+//       {
+//          // If the game is not over
+//          if(!w.getStatus())
+// 			{
+//             // Get the jpgs of the two cards
+// 				card1 = w.getH1().look().getPicture();
+// 				card2 = w.getH2().look().getPicture();
+// 				front1.setIcon(card1);
+//             front2.setIcon(card2);
+//              
+//             // Display the two cards
+//             f3.add(new JLabel(card1));
+//             f6.add(new JLabel(card2));
+//             
+// 				w.go();
+//             
+// 			}
+//       }    
+//    }
    
 }
