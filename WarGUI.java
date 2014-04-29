@@ -16,11 +16,10 @@ public class WarGUI extends JFrame
    */
    
    War w = new War(); // To hold a War object
-   private ImageIcon back; // The jpg of the back side of a card
+   private ImageIcon back, card1, card2; // The jpg of the back side of a card
    private JButton quit, go; // The buttons
-   private JPanel f1,f2,f3,f4,f5,f6,f7,f8,f9; // The frames 
-	private ImageIcon card1, card2;
-   
+   private JPanel f1, f2, f3, f4, f5, f6, f7, f8, f9; // The frames 
+   private JLabel front1, front2;
    
    /**
       A no arg constructor that creates the desired frame for the game War
@@ -43,7 +42,8 @@ public class WarGUI extends JFrame
       f1.add(h1);
       f2 = new JPanel();
       f2.add(new JLabel(back));
-      //f3.add(new JLabel(card1));
+      front1 = new JLabel();
+      f3.add(front1);
       
       // Create a label for player 2
       JLabel h2 = new JLabel("Player 2");
@@ -51,6 +51,8 @@ public class WarGUI extends JFrame
       f4.add(h2);
       f5 = new JPanel();
       f5.add(new JLabel(back));
+      front2 = new JLabel();
+      f6.add(front2);
       
       // Quit button
       JButton quit = new JButton("Quit");   
@@ -67,10 +69,10 @@ public class WarGUI extends JFrame
       // Add frames
       add(f1);
 		add(f2);
-		//add(f3);
+		add(f3);
 		add(f4);
 		add(f5);
-		//add(f6);
+		add(f6);
       add(f7);
       //add(f8);
       add(f9);
@@ -102,14 +104,16 @@ public class WarGUI extends JFrame
             // Get the jpgs of the two cards
 				card1 = w.getH1().look().getPicture();
 				card2 = w.getH2().look().getPicture();
-				
+				front1.setIcon(card1);
+            front2.setIcon(card2);
+             
             // Display the two cards
             f3.add(new JLabel(card1));
             f6.add(new JLabel(card2));
             
 				w.go();
+            
 			}
-         
       }    
    }
    
