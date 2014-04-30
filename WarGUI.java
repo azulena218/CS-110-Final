@@ -19,7 +19,7 @@ public class WarGUI extends JFrame
    private ImageIcon back, card1, card2; // The jpg of the back side of a card
    private JButton quit, go; // The buttons
    private JPanel f1, f2, f3, f4, f5, f6, f7, f8, f9; // The frames 
-   private JLabel front1, front2;
+   private JLabel front1, front2; // The jpgs of the front sides of the two cards 
    
    /**
       A no arg constructor that creates the desired frame for the game War
@@ -39,29 +39,26 @@ public class WarGUI extends JFrame
       // Create a label for player 1
       JLabel h1 = new JLabel("Player 1");
       f1 = new JPanel();
-      f1.add(h1);
+      f1.add(h1); // Add label
       f2 = new JPanel();
       f2.setBackground(Color.GRAY);
-      f2.add(new JLabel(back));
-     
+      f2.add(new JLabel(back)); // Display the back of the card 
       front1 = new JLabel();
       f3 = new JPanel();
       f3.setBackground(Color.GRAY);
-      f3.add(front1);
+      f3.add(front1); // Display the front of the first player's card
       
       // Create a label for player 2
       JLabel h2 = new JLabel("Player 2");
       f4 = new JPanel();
-      //f4.setBackground(Color.BLUE);
-      f4.add(h2);
+      f4.add(h2); // Add label
       f5 = new JPanel();
       f5.setBackground(Color.GRAY);
-      f5.add(new JLabel(back));
-      
+      f5.add(new JLabel(back)); // Display the back of the card
       front2 = new JLabel();
       f6 = new JPanel();
       f6.setBackground(Color.GRAY);
-      f6.add(front2);
+      f6.add(front2); // Display the front of the second player's card
       
       // Quit button
       JButton quit = new JButton("Quit");   
